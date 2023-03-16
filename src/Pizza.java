@@ -1,3 +1,5 @@
+import exception.IncorrectWeightException;
+
 public class Pizza {
 //  Задача 1
 //  Создайте своё собственное исключение IncorrectWeightException и
@@ -15,6 +17,7 @@ public class Pizza {
 
   public Pizza(String title, int weight) {
     this.title = title;
+    if (weight < 0) throw new IncorrectWeightException(weight);
     this.weight = weight;
   }
 
