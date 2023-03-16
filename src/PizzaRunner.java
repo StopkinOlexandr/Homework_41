@@ -16,7 +16,6 @@ public class PizzaRunner {
       } catch (IncorrectWeightException e) {
         System.err.println(e.getMessage());
       }
-
     }
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 

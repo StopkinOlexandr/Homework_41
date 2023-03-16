@@ -34,7 +34,7 @@ public class Pizza {
   private int weight;
   private static int maxWeight;
 
-  public static void setMaxWeight(int weigh){
+  public static void setMaxWeight(int weigh) {
     maxWeight = weigh;
   }
 
@@ -42,6 +42,9 @@ public class Pizza {
     this.title = title;
     if (weight < 0) {
       throw new IncorrectWeightException(weight);
+    }
+    if (weight >= maxWeight) {
+      throw new IncorrectWeightException("Введен веес больший максимального");
     }
     this.weight = weight;
   }
